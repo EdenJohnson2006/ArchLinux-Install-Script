@@ -1,4 +1,4 @@
-# ArchLinux-Intsall-Script
+# ArchLinux-Install-Script
 旨在方便，快速，直观打安装ArchLinux及GUI等附加组件。
 
 本人真正意义上的第一个开源项目（可能）
