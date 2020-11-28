@@ -1,5 +1,5 @@
 # ArchLinux-Install-Script
-旨在方便，快速，直观打安装ArchLinux及GUI等附加组件。
+旨在方便，快速，直观的安装ArchLinux及GUI等附加组件。
 
 本人真正意义上的第一个开源项目（可能）
 
@@ -22,3 +22,6 @@
 
    - 根据输入安装LTS内核 
    > [@nVidia](https://www.archlinux.org/news/nvidia-45528-is-incompatible-with-linux-59/)
+5. Live CD 环境文件修改
+    - 根据输入修改locale.gen
+    - 创建主机名文件```/etc/hostname```
