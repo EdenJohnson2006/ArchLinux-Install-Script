@@ -7,7 +7,7 @@
 #==============================
 echo "Booting Mode Detecting"
 ls /sys/firmware/efi/efivars
-if $?!=0;then
+if [ $? -ne 0 ];then
     echo "BIOS/CSM Mode , Setting BOOT_MODE to 2"
     BOOT_MODE=2
 else
@@ -20,3 +20,4 @@ DISKS=$(fdisk -l | grep -o /dev/sd | wc -l)
 if [$DISKS -eq 0];then
     echo "WARNING!!!NO DISK DECECTED!PLEASE CHECK!"
     exit 1
+fi
