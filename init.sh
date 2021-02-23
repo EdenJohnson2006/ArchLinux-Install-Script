@@ -21,4 +21,3 @@ DISKS=$(fdisk -l | grep -o /dev/sd | wc -l)
 if [$DISKS -eq 0];then
     echo "WARNING!!!NO DISK DECECTED!PLEASE CHECK!"
     exit 1
-elif 
