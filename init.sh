@@ -17,7 +17,7 @@ fi
 echo "ArchLinux Install Script Version 1"
 echo "By EdenJohnson"
 DISKS=$(fdisk -l | grep -o /dev/sd | wc -l)
-if [$DISKS -eq 0];then
+if [ $DISKS -eq 0 ];then
     echo "WARNING!!!NO DISK DECECTED!PLEASE CHECK!"
     exit 1
 fi
