@@ -14,7 +14,6 @@ else
     echo "uEFI Mode , Setting BOOT_MODE to 0"
     BOOT_MODE=0
 fi
-clear
 echo "ArchLinux Install Script Version 1"
 echo "By EdenJohnson"
 DISKS=$(fdisk -l | grep -o /dev/sd | wc -l)
