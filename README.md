@@ -10,18 +10,25 @@
 希望实现的目标：
 # 一、Script编写
 ## （一）、Live CD环境
-1. 检测当前ISO启动方式（通过``` ls /sys/firmware/efi/efivars/ ``` 实现）
+- [x] 检测当前ISO启动方式（通过``` ls /sys/firmware/efi/efivars/ ``` 实现）
 
-2. 自动根据磁盘大小分区
+- [x] 检测磁盘数量，并在多块磁盘的情况下询问
+
+  - [ ] 在分区安装 
+
+- [ ] 自动根据磁盘大小分区
   
-    - 根据输入为各分区设置挂载点
+    - [ ] 根据输入为各分区设置挂载点
 
-3. 自动根据启动方式挂载分区到```/mnt```下正确路径
+- [ ] 自动根据启动方式挂载分区到```/mnt```下正确路径
 
-4. 自动执行pacstrap，生成fstab
+- [ ] 自动执行pacstrap，生成fstab
 
-   - 根据输入安装LTS内核 
+   - [ ] 根据输入安装LTS内核 
    > [@nVidia](https://www.archlinux.org/news/nvidia-45528-is-incompatible-with-linux-59/)
-5. Live CD 环境文件修改
-    - 根据输入修改locale.gen
-    - 创建主机名文件```/etc/hostname```
+
+- [ ] Live CD 环境文件修改
+    - [ ] 根据输入修改locale.gen```/mnt/etc/locale.gen```
+    - [ ] 创建主机名文件```/mnt/etc/hostname```
+    - [ ] 更改Hosts文件```/mnt/etc/hosts```
+    - [ ] 链接时区文件```/mnt/etc/localtime```
