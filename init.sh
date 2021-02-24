@@ -20,4 +20,10 @@ DISKS=$(fdisk -l | grep -o /dev/sd | wc -l)
 if [ $DISKS -eq 0 ];then
     echo "WARNING!!!NO DISK DECECTED!PLEASE CHECK!"
     exit 1
-fi
+elif [ $DISKS -ne 1 ];then
+    echo "INFO:There Are More Than 1 Disks Found!"
+    fdisk -l | grep /dev/sd
+    read -p "You Need to Choose It Below.CAUTION:IT WILL **ERASE ALL YOUR DATA** ON YOUR CHOSEN DISK!" INSTALL_DISK
+else
+    echo "There is only 1 Disk Found."
+    read -p "IN THIS EARLY VERSION,IT WILL **ERASE ALL YOUR DATA** ON YOUR DISK!DO YOU WANT TO CONTINE?(y/n)" CHOOSE
